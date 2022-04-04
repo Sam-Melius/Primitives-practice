@@ -39,3 +39,15 @@ function fizzBuzz(number) {
     return arr;
   }
   console.log(fizzBuzz(16));
+
+  // Challenge #4 Unique String
+function uniqueString(strings) {
+    const unique = strings.map((string) => [...new Set(string)].sort());
+    const uniqueArr = [...new Set(...unique)];
+    return strings.find((s) => {
+      return uniqueArr.indexOf(s[0]) === -1;
+    });
+  }
+  
+  console.log(uniqueString(['Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a']));
+  console.log(uniqueString(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']));
